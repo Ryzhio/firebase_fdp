@@ -1,0 +1,118 @@
+import 'dart:convert';
+
+class LogisticosEntity {
+  LogisticosEntity({
+    required this.logisticos,
+  });
+
+  final List<LogisticosDetailEntity>? logisticos;
+
+  factory LogisticosEntity.fromJson(String str) =>
+      LogisticosEntity.fromMap(json.decode(str));
+
+  String toJson() => json.encode(toMap());
+
+  factory LogisticosEntity.fromMap(Map<String, dynamic> json) =>
+      LogisticosEntity(
+        logisticos: json["logisticos"] == null
+            ? null
+            : List<LogisticosDetailEntity>.from(json["logisticos"]
+                .map((x) => LogisticosDetailEntity.fromMap(x))),
+      );
+
+  Map<String, dynamic> toMap() => {
+        "logisticos": logisticos == null
+            ? null
+            : List<dynamic>.from(logisticos!.map((x) => x.toMap())),
+      };
+}
+
+class LogisticosDetailEntity {
+  LogisticosDetailEntity({
+    required this.id,
+    required this.op,
+    required this.porcentaje,
+    required this.cant,
+    // required this.op2,
+    // required this.porcentaje2,
+    // required this.cant2,
+    // required this.op3,
+    // required this.porcentaje3,
+    // required this.cant3,
+    // required this.op4,
+    // required this.porcentaje4,
+    // required this.cant4,
+    // required this.op5,
+    // required this.porcentaje5,
+    // required this.cant5,
+    required this.porcentotal,
+    required this.cantotal,
+  });
+
+  final int id;
+  final String op;
+  final String porcentaje;
+  final String cant;
+  // final String op2;
+  // final String porcentaje2;
+  // final String cant2;
+  // final String op3;
+  // final String porcentaje3;
+  // final String cant3;
+  // final String op4;
+  // final String porcentaje4;
+  // final String cant4;
+  // final String op5;
+  // final String porcentaje5;
+  // final String cant5;
+  final String porcentotal;
+  final String cantotal;
+
+  factory LogisticosDetailEntity.fromJson(String str) =>
+      LogisticosDetailEntity.fromMap(json.decode(str));
+
+  String toJson() => json.encode(toMap());
+
+  factory LogisticosDetailEntity.fromMap(Map<String, dynamic> json) =>
+      LogisticosDetailEntity(
+        op: json["op"],
+        porcentaje: json["porcentaje"],
+        cant: json["cant"],
+        id: json["id"],
+        // op2: json["op2"],
+        // porcentaje2: json["porcentaje2"],
+        // cant2: json["cant2"],
+        // op3: json["op3"],
+        // porcentaje3: json["porcentaje3"],
+        // cant3: json["cant3"],
+        // op4: json["op4"],
+        // porcentaje4: json["porcentaje4"],
+        // cant4: json["cant4"],
+        // op5: json["op5"],
+        // porcentaje5: json["porcentaje5"],
+        // cant5: json["cant5"],
+        porcentotal: json["porcentotal"],
+        cantotal: json["cantotal"],
+      );
+
+  Map<String, dynamic> toMap() => {
+        "op": op,
+        "porcentaje": porcentaje,
+        "cant": cant,
+        "id": id,
+        // "op2": op2,
+        // "porcentaje2": porcentaje2,
+        // "cant2": cant2,
+        // "op3": op3,
+        // "porcentaje3": porcentaje3,
+        // "cant3": cant3,
+        // "op4": op4,
+        // "porcentaje4": porcentaje4,
+        // "cant4": cant4,
+        // "op5": op5,
+        // "porcentaje5": porcentaje5,
+        // "cant5": cant5,
+        "porcentotal": porcentotal,
+        "cantotal": cantotal,
+      };
+}

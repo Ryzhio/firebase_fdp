@@ -1,0 +1,24 @@
+{
+  "logisticos": [
+    {
+      "id": 1,
+      "op": "AGUNSA",
+      "porcentaje": "23",
+      "cant": "85"
+    },
+    { "id": 2, "op": "NEPTUNIA S.A", "porcentaje": "8", "cant": "30" },
+    {
+      "id": 3,
+      "op": "RANSA",
+      "porcentaje": "34",
+      "cant": "127"
+    },
+    {
+      "id": 4,
+      "op": "SAN MIGUEL ARCANGEL",
+      "porcentaje": "13",
+      "cant": "47"
+    },
+    { "id": 5, "op": "TRANSTOTAL", "porcentaje": "22", "cant": "83" }
+  ]
+}
